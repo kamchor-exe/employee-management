@@ -1,0 +1,9 @@
+# Java build output
+**/bin/
+*.class
+
+# VS Code workspace data
+.vscode/*.log
+
+# Local secrets
+.env
