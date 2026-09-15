@@ -209,7 +209,7 @@ class Emp {
         }
     }
 
-
+    //Function 6: To generate report of data. Gives Max, Min & Average salary along with total number of employees in each department
     public void report(){
         System.out.println("\n------------------------------");
         System.out.println("Employee Report");
@@ -262,7 +262,7 @@ class Emp {
     public static void main(String[] args) {
         Emp emp = new Emp();
         Scanner sc = new Scanner(System.in);
-        int ch;
+        int ch=0;
 
         if (password == null || password.isBlank()) {
             System.err.println("DB_PASSWORD is not set. Set it as an environment variable before running the program.");
@@ -276,8 +276,9 @@ class Emp {
             return;
         }
 
-        System.out.println("Choose the option:\n1.Add\n2.View All\n3.Search By ID\n4.Update\n5.Delete\n6.Report");
-        System.out.print("Enter your choice: ");
+        while(ch!=7 ){
+        System.out.println("Choose the option:\n1.Add\n2.View All\n3.Search By ID\n4.Update\n5.Delete\n6.Report\n7.Exit");
+        System.out.print("\nEnter your choice: ");
         ch = sc.nextInt();
         switch (ch) {
             case 1:
@@ -298,7 +299,13 @@ class Emp {
             case 6:
                     emp.report();
                     break;
+            case 7:
+                    System.out.println("\nExited Successfully!\n");
+                    break;
+            default:
+                System.out.println("\nInvalid choice!\n");
          }
+        }
 
 
     
